@@ -14,13 +14,18 @@ import {
 import { Button } from "@/components/ui/button";
 import ProductDisplay from "./ProductDisplay";
 import Link from "next/link";
+import { EyeIcon } from "lucide-react";
 
 export function ProductModal({ product }) {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button size="sm" className=" text-xs text-[#face14]" variant="outline">
-          View
+        <Button
+          size="sm"
+          className=" text-xs border-[#face14]"
+          variant="outline"
+        >
+          <EyeIcon className=" h-3 w-3 text-gray-700" />
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent className="  max-w-max  overflow-y-auto max-h-[750px]">

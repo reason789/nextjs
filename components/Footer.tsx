@@ -15,46 +15,39 @@ const Footer = () => {
           <span className=" font-semibold">info@foodvela.com</span>
           <span className=" font-semibold">01606-551727</span>
           <div className=" flex gap-6">
-            <Image src="/facebook.png" alt="" width={16} height={16} />
-            <Image src="/instagram.png" alt="" width={16} height={16} />
-            <Image src="/youtube.png" alt="" width={16} height={16} />
-            <Image src="/pinterest.png" alt="" width={16} height={16} />
-            <Image src="/x.png" alt="" width={16} height={16} />
+            <Link href="https://www.facebook.com/foodvela71">
+              <Image src="/facebook.png" alt="" width={20} height={20} />
+            </Link>
           </div>
         </div>
 
         {/* CENTER */}
         <div className="hidden w-1/2 lg:flex justify-between">
-          <div className="flex flex-col justify-between">
+          {/* <div className="flex flex-col justify-between">
             <h1 className=" font-medium text-lg">COMPANY</h1>
             <div className=" flex flex-col gap-6">
-              <Link href="">ABOUT Us</Link>
-              <Link href="">Careers</Link>
-              <Link href="">Affiliates</Link>
-              <Link href="">Blog</Link>
-              <Link href="">Contact Us</Link>
+              <Link href="#">ABOUT Us</Link>
+              <Link href="#">Careers</Link>
+              <Link href="#">Affiliates</Link>
+              <Link href="#">Blog</Link>
+              <Link href="#">Contact Us</Link>
             </div>
-          </div>
+          </div> */}
 
           <div className="flex flex-col justify-between">
             <h1 className=" font-medium text-lg">Shop</h1>
             <div className=" flex flex-col gap-6">
-              <Link href="">New Arrivals</Link>
-              <Link href="">Accessories</Link>
-              <Link href="">Men</Link>
-              <Link href="">Women</Link>
-              <Link href="">All products</Link>
+              <Link href="">Featured Products</Link>
+              <Link href="/list?category=food-sachet">Food sachet</Link>
+              <Link href="/list?category=restaurant-item">Restaurant item</Link>
+              <Link href="/list">All products</Link>
             </div>
           </div>
 
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col">
             <h1 className=" font-medium text-lg">HELP</h1>
             <div className=" flex flex-col gap-6">
-              <Link href="">Customer Service</Link>
-              <Link href="">My Account</Link>
-              <Link href="">Find a store</Link>
-              <Link href="">Lega; & Privacy</Link>
-              <Link href="">Gift Card</Link>
+              <Link href="https://www.facebook.com/foodvela71">Contact Us</Link>
             </div>
           </div>
         </div>

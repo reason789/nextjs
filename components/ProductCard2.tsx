@@ -26,10 +26,10 @@ const ProductCard2 = ({ products = [] }) => {
     });
   };
   return (
-    <div className="mt-12 flex gap-x-2  md:gap-x-4 gap-y-16  flex-wrap">
+    <div className="mt-12 flex gap-x-2  md:gap-x-4 gap-y-16  flex-wrap  ">
       {products.map((product) => (
         <div
-          className=" flex flex-col justify-between gap-4 w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18.58%]"
+          className=" flex flex-col  w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18.58%]  rounded-md"
           key={product._id}
         >
           <Link href={`/products/${product._id}`}>
@@ -38,7 +38,6 @@ const ProductCard2 = ({ products = [] }) => {
                 src={product.images[0].url || "/product.png"}
                 alt=""
                 fill
-                sizes="25vw"
                 className="absolute object-cover  z-10 hover:opacity-0 transition-opacity easy duration-500"
               />
               <Image
@@ -54,25 +53,28 @@ const ProductCard2 = ({ products = [] }) => {
               />
             </div>
           </Link>
-          <div className="flex justify-between">
-            <Link href={`/products/${product._id}`}>
-              <span className="font-medium">{product.name}</span>
-            </Link>
+          <div className=" mt-2">
+            <div className="flex justify-between items-center mb-2">
+              <Link href={`/products/${product._id}`}>
+                <span className="font-medium text-sm  hover:underline">
+                  {product.name}
+                </span>
+              </Link>
 
-            <span className="font-semibold">
-              {product.variants[0]?.price}tk
-            </span>
-          </div>
-          {/* <div className="text-sm text-gray-500">This is description</div> */}
-          <div className=" flex justify-between">
-            <button
-              onClick={() => handleAddToCart(product)}
-              className=" ring-1 ring-[#face14] text-black py-2 px-4 w-max text-xs hover:bg-[#face14] "
-            >
-              {" "}
-              Add To Cart
-            </button>
-            <ProductModal name="View" product={product} />
+              <span className="font-semibold text-sm">
+                {product.variants[0]?.discountPrice}tk
+              </span>
+            </div>
+            <div className=" flex justify-between">
+              <button
+                onClick={() => handleAddToCart(product)}
+                className=" ring-1 ring-[#face14] text-black py-2 px-4 w-max text-xs hover:bg-[#face14] rounded-md "
+              >
+                {" "}
+                Add To Cart
+              </button>
+              <ProductModal name="View" product={product} />
+            </div>
           </div>
         </div>
       ))}

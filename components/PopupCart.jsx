@@ -18,7 +18,7 @@ const PopupCart = () => {
       <PopoverTrigger asChild>
         <div>
           <Popup value="Cart">
-            <div className="relative cursor-pointer">
+            <div className="relative cursor-pointer flex">
               <Image
                 src="/cart.png"
                 alt=""
@@ -27,7 +27,7 @@ const PopupCart = () => {
                 className="cursor-pointer"
               />
               {cartItems.length > 0 && (
-                <div className="absolute -top-4 -right-4 w-6 h-6 bg-[#face14] font-bold text-black text-sm rounded-full flex items-center justify-center">
+                <div className=" w-6 h-6 bg-[#face14] font-bold text-black text-sm rounded-full flex items-center justify-center">
                   {cartItems.length}
                 </div>
               )}

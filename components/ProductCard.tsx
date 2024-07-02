@@ -56,7 +56,7 @@ const ProductCard = ({ product }) => {
                 </p>
               </Link>
               <span className=" text-xs text-muted-foreground">
-                Price: ৳{product?.variants[0]?.price}
+                Price: ৳{product?.variants[0]?.discountPrice}
               </span>
             </div>
           </CardContent>

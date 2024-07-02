@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -19,6 +19,8 @@ import { ProductModal } from "./ProductModal";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/lib/features/cart/cartSlice";
 import { useToast } from "./ui/use-toast";
+import Skeleton from "./Skeleton";
+import ProductCard2 from "./ProductCard2";
 
 const ProductList = ({ products }) => {
   const PRODUCT_PER_PAGE = 10;
@@ -71,53 +73,10 @@ const ProductList = ({ products }) => {
         </div>
       ) : (
         <>
-          <div className="mt-8 flex gap-x-2 md:gap-x-4 gap-y-16 flex-wrap">
-            {currentProducts?.map((product) => (
-              <div
-                className="flex flex-col justify-between gap-4 w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18.58%]"
-                key={product._id}
-              >
-                <Link href={`/products/${product._id}`}>
-                  <div className="relative w-full h-72">
-                    <Image
-                      src={product.images[0].url || "/product.png"}
-                      alt=""
-                      fill
-                      sizes="25vw"
-                      className="absolute object-cover z-10 hover:opacity-0 transition-opacity ease duration-500"
-                    />
-                    <Image
-                      src={
-                        product.images[1]
-                          ? product.images[1].url
-                          : product.images[0].url || "/productPlaceholder.png"
-                      }
-                      alt=""
-                      fill
-                      sizes="25vw"
-                      className="absolute object-cover"
-                    />
-                  </div>
-                </Link>
-                <div>
-                  <div className="flex justify-between gap-1 flex-wrap">
-                    <span className="font-medium">{product.name}</span>
-                    <span className="font-semibold">
-                      ৳{product.variants[0]?.price}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <button
-                    onClick={() => handleAddToCart(product)}
-                    className="rounded-md ring-1 ring-[#face14] py-2 px-4 w-max text-xs bg-[#face14] text-black hover:bg-transparent"
-                  >
-                    Add To Cart
-                  </button>
-                  <ProductModal name="View" product={product} />
-                </div>
-              </div>
-            ))}
+          <div>
+            <Suspense fallback={<Skeleton />}>
+              <ProductCard2 products={currentProducts} />
+            </Suspense>
           </div>
           <div className="mt-16">
             <Pagination>
