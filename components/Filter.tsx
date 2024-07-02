@@ -136,7 +136,7 @@ const Filter = ({
             key={filter}
             variant="secondary"
             size="sm"
-            className={`rounded-sm text-xs capitalize ${
+            className={`rounded-sm text-xs capitalize font-semibold ${
               selectedFilter === filter
                 ? "bg-[#face14] text-black hover:bg-[#face14] "
                 : " hover:bg-[#face14]"

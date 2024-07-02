@@ -53,7 +53,7 @@ const ProductCard2 = ({ products = [] }) => {
               />
             </div>
           </Link>
-          <div className=" mt-2">
+          <div className=" mt-4">
             <div className="flex justify-between items-center mb-2">
               <Link href={`/products/${product._id}`}>
                 <span className="font-medium text-sm  hover:underline">
@@ -68,7 +68,7 @@ const ProductCard2 = ({ products = [] }) => {
             <div className=" flex justify-between">
               <button
                 onClick={() => handleAddToCart(product)}
-                className=" ring-1 ring-[#face14] text-black py-2 px-4 w-max text-xs hover:bg-[#face14] rounded-md "
+                className=" ring-1 ring-[#face14] font-semibold text-black py-2 px-4 w-max text-xs hover:bg-transparent bg-[#face14] rounded-md "
               >
                 {" "}
                 Add To Cart

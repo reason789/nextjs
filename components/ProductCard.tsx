@@ -65,7 +65,7 @@ const ProductCard = ({ product }) => {
           <div className="flex items-center justify-between">
             <button
               onClick={() => handleAddToCart(product)}
-              className=" rounded-md ring-1 ring-[#face14] py-2 px-4 w-max text-xs bg-[#face14] text-black hover:bg-transparent "
+              className=" rounded-md ring-1 ring-[#face14] font-semibold py-2 px-4 w-max text-xs bg-[#face14] text-black hover:bg-transparent "
             >
               Add To Cart
             </button>
