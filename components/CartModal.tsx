@@ -14,6 +14,11 @@ const CartModal = ({ cartItems }) => {
     dispatch(removeFromCart({ variantId }));
   };
 
+  const subtotal = cartItems.reduce(
+    (total, item) => total + item.variant.discountPrice * item.quantity,
+    0
+  );
+
   return (
     <div className=" space-y-6 max-h-[600px] overflow-y-auto">
       {cartItems.length == 0 ? (
@@ -43,7 +48,7 @@ const CartModal = ({ cartItems }) => {
                         <div className="text-xs text-green-500">
                           {item.quantity} x{" "}
                         </div>
-                        ${item?.variant?.discountPrice}
+                        ৳{item?.variant?.discountPrice}
                       </div>
                     </div>
                     {/* DESC */}
@@ -68,7 +73,7 @@ const CartModal = ({ cartItems }) => {
           <div className="">
             <div className="flex items-center justify-between font-semibold">
               <span className="">Subtotal</span>
-              <span className="">$124</span>
+              <span className="">৳{subtotal}</span>
             </div>
             <p className="text-gray-500 text-sm mt-2 mb-4">
               Shipping and taxes calculated at checkout.
