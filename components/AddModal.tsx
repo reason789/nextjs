@@ -95,6 +95,16 @@ export default function AddModal() {
                     </a>
                   </Button>
                 </div>
+                <p className=" mt-2 text-gray-700 font-semibold ">Or</p>
+                <p className=" text-lg font-bold text-blue-600">
+                  Call:{" "}
+                  <a
+                    href="tel:+8801606551727"
+                    className="underline hover:text-blue-800"
+                  >
+                    0160 655 1727
+                  </a>
+                </p>
               </div>
             </div>
           </div>
