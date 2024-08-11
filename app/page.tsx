@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "@/lib/features/products/productsSlice";
 import Skeleton from "@/components/Skeleton";
 import LoadingOverlay from "@/components/LoadingOverlay";
+import AddModal from "@/components/AddModal";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ export default function Home() {
 
   return (
     <div className="">
+      <AddModal />
       <HeroCarousel />
       <div className="px-4 md:px-8 lg:px-16 m-auto relative max-w-screen-xl mt-20 mb-6">
         <div className="mb-24">
