@@ -59,7 +59,7 @@ export default function AddModal() {
                   <li className="mb-2">24/7 customer support available</li>
                 </ul>
               </div>
-              <Button onClick={closeModal} className=" absolute top-0 right-0 ">
+              <Button onClick={closeModal} className=" absolute top-4 right-4 ">
                 ✖
               </Button>
 
