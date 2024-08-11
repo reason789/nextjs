@@ -8,7 +8,7 @@ export default function AddModal() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 3000); // Show the modal after 3 seconds
+    }, 2000); // Show the modal after 3 seconds
     return () => clearTimeout(timer);
   }, []);
 
@@ -55,11 +55,8 @@ export default function AddModal() {
                   <li className="mb-2">
                     Special discount on your first purchase
                   </li>
-                  <li className="mb-2">Fast and reliable shipping worldwide</li>
+                  <li className="mb-2">Fast and reliable shipping </li>
                   <li className="mb-2">24/7 customer support available</li>
-                  <li className="mb-2">
-                    Satisfaction guaranteed or your money back
-                  </li>
                 </ul>
               </div>
               <Button onClick={closeModal} className=" absolute top-0 right-0 ">
