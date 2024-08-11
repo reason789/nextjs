@@ -77,7 +77,7 @@ export default function AddModal() {
                   <Button className=" bg-green-500">
                     <MessageCircleWarning />{" "}
                     <a
-                      href="https://wa.me/01606551727?text=I'm%20interested%20in%20your%20product"
+                      href="https://wa.me/+8801606551727?text=I'm%20interested%20in%20your%20product"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
