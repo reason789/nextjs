@@ -13,7 +13,7 @@ const Footer = () => {
           </Link>
           <p>Chawrasta, Mawna, Gazipur</p>
           <span className=" font-semibold">info@foodvela.com</span>
-          <span className=" font-semibold">01606-551727</span>
+          <span className=" font-semibold">01987-296298</span>
           <div className=" flex gap-6">
             <Link href="https://www.facebook.com/foodvela71">
               <Image src="/facebook.png" alt="" width={20} height={20} />
