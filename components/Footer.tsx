@@ -11,7 +11,7 @@ const Footer = () => {
           <Link href="/">
             <div className=" text-2xl tracking-wide">FOODVELA</div>
           </Link>
-          <p>Chawrasta, Mawna, Gazipur</p>
+          
           <span className=" font-semibold">info@foodvela.com</span>
           <span className=" font-semibold">01987-296298</span>
           <div className=" flex gap-6">
