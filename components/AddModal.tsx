@@ -77,7 +77,7 @@ export default function AddModal() {
                   <Button className=" bg-green-500">
                     <MessageCircleWarning />{" "}
                     <a
-                      href="https://wa.me/+8801606551727?text=I'm%20interested%20in%20your%20product"
+                      href="https://wa.me/+8801987296298?text=I'm%20interested%20in%20your%20product"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -99,7 +99,7 @@ export default function AddModal() {
                 <p className=" text-lg font-bold text-blue-600">
                   Call:{" "}
                   <a
-                    href="tel:+8801606551727"
+                    href="tel:+8801987296298"
                     className="underline hover:text-blue-800"
                   >
                     0160 655 1727
